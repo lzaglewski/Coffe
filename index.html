@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffe Counter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+  
+  <style>
+      
+      body{
+          background-color: #fde1b4;
+          width: 100%;
+          height: 100vh;
+          overflow-x: hidden;
+          
+      }
+
+      .licznik-cotainer{
+        position: absolute;
+        width: 90px;
+        height: 50px;
+        top: 270px;
+        left: 48.5%;
+         margin-left: -250px;
+        text-align: center;
+
+      }
+
+
+      #licznik{
+       
+         color: white;
+         font-size: 33px;
+
+      }
+
+
+      #number{
+        position: absolute;
+        top: 100px;
+         right: 50%;
+      }
+
+      #bubble{
+        position: absolute;
+        top: 250px;
+        left: 50%;
+         margin-left: -300px;
+      }
+    
+      #filizanka{
+          position: absolute;
+          
+          top: 0;
+          left: 50%;
+          margin-left: -400px;
+          margin-top: 50px;
+      }
+      
+      #kawiarka{
+          position:absolute;
+          left: 45%;
+          top: -150px;
+          margin-top: 50px;
+      }
+      
+      
+      .kawiarka-anim{
+
+          animation-name: kawiarka_rotate;
+          animation-duration: 4s;
+  
+      }
+
+      
+      
+      
+      #drop1{
+          position: absolute;
+           margin-top: 180px;
+          width: 50px;
+          height: 50px;
+          left: 53%;
+     
+          animation-delay: 0.3s;
+          
+      }
+      
+      
+         #drop2{
+          position: absolute;
+           margin-top: 180px;
+          width: 50px;
+          height: 50px;
+          left: 53%;
+      
+          animation-delay:1s;
+      }
+      
+        #drop3{
+          position: absolute;
+           margin-top: 190px;
+          width: 50px;
+          height: 50px;
+          left: 53%;
+     
+          animation-delay:1.8s;
+      }
+      
+      
+        
+      .drop-anim{
+            
+            background-color: #d6917c;
+            border-radius: 50%;
+            visibility: hidden;
+          
+         
+            animation-name: drop_drop;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+         
+      }
+      
+      
+    @keyframes kawiarka_rotate {
+        0% {transform: rotateZ(0deg);}
+        50% {transform: rotateZ(-25deg);}
+       
+}
+      
+      
+      @keyframes drop_drop{
+        
+          29%{visibility: visible;}
+          30%{transform: translate(-60px,70px); background-color: #d6917c;}
+           40%{transform: translate(-79px,100px); background-color: #be4629}
+           50%{transform: translate(-95px,140px); }
+        100%{transform: translate(-120px,300px); background-color: #8d361e}
+          
+      }
+      
+      
+      
+      
+    </style>
+   
+<div class="container">
+
+
+
+<div class="licznik-cotainer"><p id="licznik"><p></div>
+
+
+<img id="number" src="click-me.png">
+<img id="bubble" src="2.png">
+ 
+    <div id="drop1" ></div>
+      <div id="drop2" ></div>
+       <div id="drop3" ></div>
+      
+     
+   <div id="filizanka">
+       
+       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px"
+	 height="600px" viewBox="0 0 800 600"xml:space="preserve">
+<g id="Layer_1">
+</g>
+<g id="Layer_2">
+	<g>
+		
+			<ellipse fill="none" stroke="#FFA33A" stroke-width="15" stroke-miterlimit="10" cx="565.601" cy="460.12" rx="32.042" ry="31.085"/>
+		<path fill="#FFA33A" d="M541.881,410.436c1.326,7.198,2.014,14.576,2.014,22.092c0,77.833-73.807,140.933-164.852,140.933
+			s-164.852-63.1-164.852-140.933c0-8.034,0.787-15.913,2.297-23.579"/>
+		<path fill="#FFA33A" d="M557.937,581.668c0,16.836-80.093,30.486-178.896,30.486c-98.8,0-178.894-13.65-178.894-30.486"/>
+		<rect x="305.739" y="604.102" fill="#FFA33A" width="146.606" height="10.949"/>
+		<path fill="#FFB561" d="M298.449,521.67c-37.778,0-68.348-45.76-68.348-102.308h68.348v51.153V521.67z"/>
+	</g>
+</g>
+</svg>
+   </div>
+   
+   <div id="kawiarka" >
+      
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px"  viewBox="0 0 768 1024" xml:space="preserve">
+<g>
+	<path fill="#E95A61" d="M389.033,213.789"/>
+	<polygon fill="#E95A61" points="187.979,417.763 117.699,455.88 251.892,495.613 	"/>
+	<polygon fill="#E95A61" points="191.376,415.921 254.039,381.934 386.364,565.668 333.542,594.317 	"/>
+	<polygon fill="#E95A61" points="257.552,380.029 339.076,335.814 447.506,532.507 389.285,564.084 	"/>
+	<polygon fill="#E95A61" points="341.653,334.417 428.334,286 522.334,335.814 537,408.301 506.389,412.694 496.688,354.488 
+		419.463,308.487 403.351,318.857 479.6,515.101 451.021,530.602 	"/>
+	<polygon fill="#E95A61" points="334.768,596.305 482.399,516.593 490.896,530.341 343.262,610.051 	"/>
+	<polygon fill="#E95A61" points="346.602,611.846 402.643,809.996 489.198,780.631 396.351,584.863 	"/>
+	<polygon fill="#E95A61" points="398.229,583.846 458.663,551.068 588.053,727.016 491.073,779.615 	"/>
+	<polygon fill="#E95A61" points="460.539,550.047 492.396,532.77 651.306,679.926 589.46,726.252 	"/>
+	<polygon fill="#E95A61" points="182.331,405.681 397.541,304.105 282.924,296.651 279.381,263.81 225.37,289.302 254.284,310.168 	
+		"/>
+</g>
+</svg>
+       
+       
+   </div>
+   
+</div>
+
+<script>
+
+var count=0;
+
+// var kawiarka=document.getElementById("kawiarka");
+
+$("#kawiarka").click(function(){
+
+  count++;
+
+      $("#licznik").html(count);
+
+      $("#kawiarka").addClass('kawiarka-anim');
+      $("#drop1").addClass('drop-anim');
+      $("#drop2").addClass('drop-anim');
+      $("#drop3").addClass('drop-anim');
+
+
+
+   setTimeout(function(){
+          $("#kawiarka").removeClass("kawiarka-anim");
+          $("#drop1").removeClass("drop-anim");
+          $("#drop2").removeClass("drop-anim");
+          $("#drop3").removeClass("drop-anim");
+
+
+      },5000)        
+});
+
+
+
+
+</script>
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
